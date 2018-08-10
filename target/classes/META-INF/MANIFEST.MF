@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: O2O
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: DELL
+Implementation-Vendor-Id: springbootdemo
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/O2O
+Created-By: Maven Integration for Eclipse
+

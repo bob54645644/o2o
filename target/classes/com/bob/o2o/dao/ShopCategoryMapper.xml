@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bob.o2o.dao.ShopCategoryMapper">
+	<resultMap type="com.bob.o2o.entity.ShopCategory" id="ShopResultMap">
+		<id column="" property="" />
+		<result column="" property="" />
+
+	</resultMap>
+	<!-- 返回所有店铺类别信息 -->
+	<select id="queryShopCategory" resultType="com.bob.o2o.entity.ShopCategory">
+	select *
+	FROM 
+	`tb_shop_category` 
+	<where>
+		<if test="parent == null">
+			and parent_id is null
+		</if>
+		<if test="parent != null">
+			and parent_id is not null
+		</if>
+		<if test="parent!=null">
+			and parent_id = #{parent.shopCategoryId}
+		</if>
+	</where>
+	order by
+	priority desc
+	</select>
+</mapper>

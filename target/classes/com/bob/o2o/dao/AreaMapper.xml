@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bob.o2o.dao.AreaMapper">
+	<resultMap type="com.bob.o2o.entity.Area" id="AreaResultMap">
+		<id column="area_id" property="areaId"/>
+		<result column="" property=""/>
+		
+	</resultMap>
+	<!-- 查询所有记录，按权重降序 -->
+	<select id="findAll" resultType="com.bob.o2o.entity.Area">
+		SELECT *
+		FROM tb_area
+		ORDER BY priority
+		DESC
+	</select>
+	<!-- 插入一条记录 -->
+	<insert id="insertArea" parameterType="com.bob.o2o.entity.Area" useGeneratedKeys="true" keyProperty="areaId" keyColumn="area_id">
+	Insert INTO
+	tb_area(area_name,priority,create_time,last_edit_time)
+	values(#{areaName},#{priority},#{createTime},#{lastEditTime})
+	</insert>
+	<!-- 删除一条记录 -->
+	<delete id="deleteArea">
+		delete from
+		tb_area
+		where
+		area_id=#{areaId}
+	</delete>
+	<!-- 批量删除记录 -->
+	<delete id="batchDeleteArea" parameterType="Integer">
+		delete from
+		tb_area
+		where
+		area_id in
+		<foreach collection="list" item="areaId" open="(" separator="," close=")">
+			#{areaId}
+		</foreach>
+	</delete>
+	<!-- 修改记录 -->
+	<update id="updateArea" parameterType="com.bob.o2o.entity.Area">
+		update tb_area
+		<set>
+			<if test="areaName!=null">area_name=#{areaName},</if>
+			<if test="priority!=null">priority=#{priority},</if>
+			<if test="lastEditTime!=null">last_edit_time=#{lastEditTime}</if>
+		</set>
+		where area_id=#{areaId}
+	</update>
+</mapper>
