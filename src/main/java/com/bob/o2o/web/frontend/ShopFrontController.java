@@ -52,4 +52,9 @@ public class ShopFrontController {
 	public String mainPage() {
 		return "view/mainpage";
 	}
+	//前端店铺列表
+	@GetMapping("/viewshoplist")
+	public String viewshopList() {
+		return "view/viewshoplist";
+	}
 }

@@ -22,3 +22,9 @@
 2018-08-14 15:33:16.468 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 16512 (started by DELL in E:\eclipse-javaee\O2O)
 2018-08-14 15:33:16.470 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
 2018-08-14 15:33:19.616 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.449 seconds (JVM running for 4.528)
+2018-08-14 16:00:09.437 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 15864 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 16:00:09.443 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
+2018-08-14 16:00:16.802 [restartedMain] INFO  com.bob.Application - Started Application in 7.789 seconds (JVM running for 8.917)
+2018-08-14 17:22:08.972 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 18420 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 17:22:08.979 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
+2018-08-14 17:22:16.637 [restartedMain] INFO  com.bob.Application - Started Application in 8.176 seconds (JVM running for 9.112)

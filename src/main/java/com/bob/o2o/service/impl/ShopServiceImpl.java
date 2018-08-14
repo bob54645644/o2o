@@ -114,7 +114,7 @@ public class ShopServiceImpl implements ShopService{
 		return shopMapper.queryByShopId(shopId);
 	}
 
-
+	//根据店铺信息查询店铺
 	@Override
 	public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
 		//将页码转换成行数

@@ -54,3 +54,836 @@
 2018-08-14 15:33:20.157 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
 2018-08-14 15:33:20.157 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 0(Integer), 100(Integer)
 2018-08-14 15:33:20.176 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 18
+2018-08-14 16:00:09.441 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 16:00:24.960 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 16:00:25.016 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 16:00:25.038 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 16:00:25.072 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==>  Preparing: SELECT `line_id`, `line_name`, `line_link`, `line_img`, `priority`, `enable_status`, `create_time`, `last_edit_time` FROM `tb_head_line` WHERE enable_status = ? 
+2018-08-14 16:00:25.073 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==> Parameters: 1(Integer)
+2018-08-14 16:00:25.076 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - <==      Total: 2
+2018-08-14 16:08:17.952 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 16:08:17.953 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2018-08-14 16:08:17.983 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
+2018-08-14 16:08:17.984 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 16:08:17.984 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Long)
+2018-08-14 16:08:17.985 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 17:22:08.977 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 17:22:59.428 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 17:22:59.467 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 17:22:59.490 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 17:22:59.497 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 17:22:59.498 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 17:22:59.501 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 17:28:25.098 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 17:28:25.098 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 17:28:25.100 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 17:28:25.101 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 17:28:25.102 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 17:28:25.105 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 18:27:27.940 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is not null and parent_id = ? order by priority desc 
+2018-08-14 18:27:27.940 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 3(Long)
+2018-08-14 18:27:27.942 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 1
+2018-08-14 18:27:27.943 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 18:27:27.943 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 18:27:27.947 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 18:27:51.054 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 18:27:51.055 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 18:27:51.059 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 18:27:51.060 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 18:27:51.060 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 18:27:51.061 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 18:28:42.396 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 18:28:42.397 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 100(Integer)
+2018-08-14 18:28:42.403 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 18:28:42.405 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 18:28:42.405 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 18:28:42.407 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 18:29:42.531 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 18:29:42.534 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 1(Integer), 0(Integer), 100(Integer)
+2018-08-14 18:29:42.537 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 18:29:42.538 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 18:29:42.539 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long), 1(Integer)
+2018-08-14 18:29:42.540 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 18:30:50.312 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 18:30:50.313 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 100(Integer)
+2018-08-14 18:30:50.316 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 18:30:50.317 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 18:30:50.317 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 18:30:50.318 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 20:43:39.820 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 20:43:39.826 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 100(Integer)
+2018-08-14 20:43:39.838 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 20:43:39.841 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 20:43:39.844 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 20:43:39.846 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 20:43:48.437 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 20:43:48.438 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 20:43:48.440 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 20:43:48.440 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 20:43:48.441 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 20:43:48.442 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 20:44:12.158 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 20:44:12.159 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 20:44:12.160 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 20:44:12.165 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==>  Preparing: SELECT `line_id`, `line_name`, `line_link`, `line_img`, `priority`, `enable_status`, `create_time`, `last_edit_time` FROM `tb_head_line` WHERE enable_status = ? 
+2018-08-14 20:44:12.165 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==> Parameters: 1(Integer)
+2018-08-14 20:44:12.167 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - <==      Total: 2
+2018-08-14 21:03:14.883 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:14.883 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:14.883 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:14.883 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:14.885 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:14.886 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:14.887 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:14.887 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:14.888 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:14.889 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:14.889 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:14.890 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:20.081 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:20.081 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:20.081 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:20.082 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:20.083 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:20.083 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:20.084 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:20.084 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:20.089 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:20.089 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:20.091 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:20.112 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:20.731 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:20.732 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:20.734 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:20.735 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:20.735 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:20.735 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:20.735 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:20.737 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:20.740 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:20.741 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:20.741 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:20.742 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:21.122 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:21.122 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:21.123 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:21.123 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:21.125 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:21.127 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:21.127 [http-nio-8080-exec-5] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:21.127 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:21.128 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:21.129 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:21.129 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:21.133 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:21.279 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:21.279 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:21.279 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:21.281 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:21.282 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:21.283 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:21.284 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:21.284 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:21.284 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:21.284 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:21.285 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:21.285 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:21.612 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:21.612 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:21.613 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:21.613 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:21.613 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:21.613 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:21.614 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:21.615 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:21.615 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:21.617 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:21.617 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:21.618 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:21.779 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:21.779 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:21.780 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:21.780 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:21.781 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:21.781 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:21.781 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:21.782 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:21.782 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:21.782 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:21.782 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:21.783 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:03:44.724 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:03:44.725 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:03:44.726 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:03:44.726 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:03:44.726 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:03:44.726 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:03:44.726 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:03:44.727 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:03:44.737 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:03:44.737 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:03:44.738 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:03:44.739 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:04:25.426 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:04:25.426 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:04:25.427 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:04:25.428 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:04:25.428 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:04:25.429 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:04:25.429 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:04:25.429 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:04:25.430 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:04:25.430 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:04:25.430 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:04:25.431 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:04:49.041 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:04:49.042 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:04:49.043 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:04:49.044 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:04:49.043 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:04:49.047 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:04:49.048 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:04:49.048 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:04:49.049 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:04:49.049 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:04:49.050 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:04:49.051 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:05:02.781 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:05:02.783 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:05:02.783 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:05:02.783 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:05:02.785 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:05:02.786 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:05:02.786 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:05:02.786 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:05:02.786 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:05:02.787 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:05:02.787 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:05:02.789 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:05:04.089 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:05:04.091 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:05:04.093 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:05:04.093 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:05:04.093 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:05:04.093 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:05:04.094 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:05:04.094 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:05:04.095 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:05:04.096 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:05:04.096 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:05:04.097 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:05:12.323 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:05:12.323 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:05:12.324 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:05:12.325 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:05:12.325 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:05:12.325 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:05:12.327 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:05:12.327 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:05:12.331 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:05:12.331 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:05:12.331 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:05:12.332 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:20:00.477 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:20:00.477 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:20:00.479 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:20:00.479 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:20:00.479 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:20:00.480 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:20:46.607 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:20:46.625 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:20:46.749 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:20:46.777 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:20:46.786 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:20:46.799 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:21:58.604 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:21:58.605 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:21:58.606 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:21:58.607 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:21:58.607 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:21:58.608 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:22:01.908 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:22:01.908 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:22:01.910 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:22:01.911 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:22:01.911 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:22:01.912 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:22:26.136 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:22:26.137 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:22:26.141 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:22:26.142 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:22:26.143 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:22:26.144 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:22:26.146 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:22:26.146 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:22:26.147 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:22:26.148 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:22:26.148 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:22:26.149 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:24:18.893 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:24:18.893 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:24:18.893 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:24:18.894 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:24:18.894 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:24:18.895 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:24:18.895 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:24:18.895 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:24:18.895 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:24:18.896 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:24:18.896 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:24:18.897 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:24:30.997 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:24:30.998 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:24:31.002 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:24:31.002 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:24:31.002 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:24:31.002 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:24:31.002 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:24:31.003 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:24:31.004 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:24:31.005 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:24:31.005 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:24:31.006 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:24:32.010 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:24:32.010 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:24:32.012 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:24:32.013 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:24:32.013 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:24:32.016 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:24:32.016 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:24:32.017 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:24:32.019 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:24:32.020 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:24:32.020 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:24:32.021 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:33:27.837 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:33:27.838 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:33:27.837 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:33:27.841 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:33:27.841 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:33:27.842 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:33:27.842 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:33:27.842 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:33:27.842 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:33:27.843 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:33:27.843 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:33:27.843 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:34:04.411 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:34:04.411 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:34:04.412 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:34:04.412 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:34:04.412 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:34:04.413 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:34:04.421 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:34:04.421 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:34:04.426 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:34:04.426 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:34:04.426 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:34:04.426 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:41:15.006 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:41:15.007 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:41:15.007 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:41:15.007 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:41:15.009 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:41:15.009 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:41:15.009 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:41:15.010 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:41:15.010 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:41:15.010 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:41:15.011 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:41:15.013 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:41:42.509 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:41:42.509 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:41:42.510 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:41:42.510 [http-nio-8080-exec-10] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:41:42.510 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:41:42.511 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:41:42.511 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:41:42.511 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:41:42.512 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:41:42.513 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:41:42.513 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:41:42.514 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:42:36.212 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:42:36.213 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:42:36.213 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:42:36.213 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:42:36.214 [http-nio-8080-exec-8] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:42:36.214 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:42:36.214 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:42:36.215 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:42:36.220 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:42:36.220 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:42:36.221 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:42:36.221 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:43:14.330 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:43:14.331 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:43:14.333 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:43:14.333 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:43:14.333 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:43:14.334 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:44:19.447 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:44:19.447 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:44:19.450 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:44:19.451 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:44:19.451 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:44:19.454 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:44:26.916 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:44:26.916 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:44:26.916 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:44:26.917 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:44:26.917 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:44:26.918 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:44:26.918 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:44:26.918 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:44:26.919 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:44:26.920 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:44:26.920 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:44:26.921 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:45:45.394 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:45:45.394 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:45:45.395 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:45:45.395 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:45:45.395 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:45:45.395 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:45:45.397 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:45:45.396 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:45:45.404 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:45:45.406 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:45:45.407 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:45:45.408 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:46:08.074 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:46:08.074 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:46:08.074 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:46:08.075 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:46:08.075 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:46:08.075 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:46:08.076 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:46:08.077 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:46:08.082 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:46:08.083 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:46:08.083 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:46:08.083 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 21:48:13.226 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 21:48:13.226 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 21:48:13.227 [http-nio-8080-exec-9] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 21:48:13.227 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 21:48:13.227 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 21:48:13.228 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 21:48:13.232 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 21:48:13.232 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 21:48:13.234 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 21:48:13.235 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 21:48:13.235 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 21:48:13.236 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:22.006 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 22:08:22.006 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 22:08:22.007 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 22:08:22.007 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 22:08:22.008 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 22:08:22.008 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 22:08:22.009 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:22.010 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:22.012 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:22.012 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:22.013 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:22.014 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:34.542 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:34.543 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:34.545 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 2
+2018-08-14 22:08:34.545 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:34.546 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long), 1(Integer)
+2018-08-14 22:08:34.546 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:40.484 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:40.485 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:40.487 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:40.487 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:40.487 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:40.488 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:42.493 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:42.493 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:42.495 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:42.496 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:42.496 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:42.497 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:44.500 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:44.501 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:44.502 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:44.503 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:44.503 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:44.503 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:46.364 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:46.364 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:46.365 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 2
+2018-08-14 22:08:46.366 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:46.366 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long), 1(Integer)
+2018-08-14 22:08:46.367 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:48.451 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:48.452 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:48.455 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:48.455 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:48.455 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:48.456 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:50.043 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:50.043 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:50.045 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:50.046 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:50.046 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:50.046 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:50.531 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:50.532 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:50.533 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 2
+2018-08-14 22:08:50.534 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:50.534 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long), 1(Integer)
+2018-08-14 22:08:50.535 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:08:55.782 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:08:55.783 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:08:55.784 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:08:55.785 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:08:55.785 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:08:55.786 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:00.615 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:00.615 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 2(Integer), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:00.617 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 22:09:00.618 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:00.618 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 2(Integer), 1(Integer)
+2018-08-14 22:09:00.619 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:02.420 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:02.420 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:02.422 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:09:02.423 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:02.423 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer), 1(Integer)
+2018-08-14 22:09:02.423 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:51.263 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:51.264 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:51.264 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 22:09:51.265 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 22:09:51.265 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:09:51.266 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:51.267 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:09:51.268 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:51.268 [http-nio-8080-exec-1] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 22:09:51.268 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 22:09:51.268 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 22:09:51.269 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 22:09:53.701 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:53.702 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:53.703 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:09:53.704 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:53.704 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:09:53.704 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:55.572 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:55.572 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 4(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:55.573 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:09:55.574 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:55.574 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 4(Long), 1(Integer)
+2018-08-14 22:09:55.575 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:57.227 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:57.228 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:57.229 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:09:57.229 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:57.229 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:09:57.230 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:09:59.756 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:09:59.756 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 2(Integer), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:09:59.757 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 22:09:59.758 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:09:59.758 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 2(Integer), 1(Integer)
+2018-08-14 22:09:59.759 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:01.156 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:01.156 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:10:01.157 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:01.158 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE a.area_id = ? and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:01.158 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer), 1(Integer)
+2018-08-14 22:10:01.159 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:21.536 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 22:10:21.536 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:21.536 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 22:10:21.536 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:10:21.537 [http-nio-8080-exec-3] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 22:10:21.537 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 22:10:21.537 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:21.537 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 22:10:21.537 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:21.537 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:21.538 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 22:10:21.538 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:22.232 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:22.233 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 3(Integer), 3(Integer)
+2018-08-14 22:10:22.236 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:22.237 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:22.237 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:22.239 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:22.510 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:22.510 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 6(Integer), 3(Integer)
+2018-08-14 22:10:22.511 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:22.512 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:22.512 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:22.513 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.009 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.010 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 9(Integer), 3(Integer)
+2018-08-14 22:10:23.011 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:23.012 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.012 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.013 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.312 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.312 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 12(Integer), 3(Integer)
+2018-08-14 22:10:23.315 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 22:10:23.315 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.316 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.317 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.560 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.560 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 15(Integer), 3(Integer)
+2018-08-14 22:10:23.562 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:23.562 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.562 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.563 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.611 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.611 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 18(Integer), 3(Integer)
+2018-08-14 22:10:23.612 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:23.613 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.613 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.614 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.626 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.627 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 21(Integer), 3(Integer)
+2018-08-14 22:10:23.628 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:23.629 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.629 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.629 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:23.642 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:23.642 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 24(Integer), 3(Integer)
+2018-08-14 22:10:23.643 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:23.644 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:23.644 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:23.645 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:25.060 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:25.061 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 27(Integer), 3(Integer)
+2018-08-14 22:10:25.065 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:25.066 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:25.067 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:25.068 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:27.648 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:27.649 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 22:10:27.650 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:27.651 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:27.651 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:27.652 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:28.194 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:28.194 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 3(Integer), 3(Integer)
+2018-08-14 22:10:28.197 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:28.197 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:28.198 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:28.199 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:28.508 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:28.508 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 6(Integer), 3(Integer)
+2018-08-14 22:10:28.510 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:28.510 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:28.511 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:28.511 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:28.758 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:28.758 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 9(Integer), 3(Integer)
+2018-08-14 22:10:28.760 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 22:10:28.760 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:28.760 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:28.761 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:29.042 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:29.042 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 12(Integer), 3(Integer)
+2018-08-14 22:10:29.043 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 22:10:29.044 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:29.044 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:29.044 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:29.241 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:29.241 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 15(Integer), 3(Integer)
+2018-08-14 22:10:29.242 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:29.242 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:29.242 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:29.243 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:29.358 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:29.358 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 18(Integer), 3(Integer)
+2018-08-14 22:10:29.359 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:29.360 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:29.360 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:29.360 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:29.375 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:29.376 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 21(Integer), 3(Integer)
+2018-08-14 22:10:29.377 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:29.377 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:29.378 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:29.378 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:30.306 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:30.307 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 24(Integer), 3(Integer)
+2018-08-14 22:10:30.309 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:30.310 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:30.311 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:30.312 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:33.259 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:33.260 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 27(Integer), 3(Integer)
+2018-08-14 22:10:33.261 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:33.262 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:33.263 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:33.265 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:33.290 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:33.291 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 30(Integer), 3(Integer)
+2018-08-14 22:10:33.293 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:33.293 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:33.293 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:33.293 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 22:10:33.407 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 22:10:33.408 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 33(Integer), 3(Integer)
+2018-08-14 22:10:33.409 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 22:10:33.410 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 22:10:33.410 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 22:10:33.410 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:18.279 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 23:12:18.279 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 23:12:18.282 [http-nio-8080-exec-2] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 23:12:18.283 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 23:12:18.283 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 23:12:18.284 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 23:12:18.285 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:18.286 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 23:12:18.289 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:18.289 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:18.289 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:18.291 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:23.893 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:23.893 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 3(Integer), 3(Integer)
+2018-08-14 23:12:23.895 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:23.896 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:23.896 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:23.897 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:29.648 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:29.648 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 23:12:29.747 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:29.747 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:29.747 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:29.748 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:33.440 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:33.441 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 3(Integer), 3(Integer)
+2018-08-14 23:12:33.443 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:33.444 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:33.444 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:33.445 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:34.388 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:34.389 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 6(Integer), 3(Integer)
+2018-08-14 23:12:34.391 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 2
+2018-08-14 23:12:34.392 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:34.392 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:34.393 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:34.773 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:34.774 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 9(Integer), 3(Integer)
+2018-08-14 23:12:34.776 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:34.776 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:34.777 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:34.778 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:35.437 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:35.438 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 12(Integer), 3(Integer)
+2018-08-14 23:12:35.439 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:35.440 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:35.441 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:35.442 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:35.454 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:35.454 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 15(Integer), 3(Integer)
+2018-08-14 23:12:35.455 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:35.456 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:35.456 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:35.457 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:35.471 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:35.471 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 18(Integer), 3(Integer)
+2018-08-14 23:12:35.472 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:35.472 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:35.472 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:35.473 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:35.488 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:35.488 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 21(Integer), 3(Integer)
+2018-08-14 23:12:35.489 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:35.490 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_name like '%店%' and s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:35.490 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:35.491 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:41.193 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:41.193 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 23:12:41.195 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:41.196 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:41.196 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:41.196 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:43.820 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:43.821 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 3(Integer), 3(Integer)
+2018-08-14 23:12:43.822 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:43.823 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:43.823 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:43.824 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:44.170 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:44.171 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 6(Integer), 3(Integer)
+2018-08-14 23:12:44.173 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:44.174 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:44.174 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:44.175 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:44.602 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:44.602 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 9(Integer), 3(Integer)
+2018-08-14 23:12:44.604 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:12:44.605 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:44.605 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:44.607 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:45.820 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:45.820 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 12(Integer), 3(Integer)
+2018-08-14 23:12:45.822 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 1
+2018-08-14 23:12:45.823 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:45.824 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:45.825 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:46.102 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:46.102 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 15(Integer), 3(Integer)
+2018-08-14 23:12:46.104 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:46.104 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:46.105 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:46.107 [http-nio-8080-exec-2] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:46.151 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:46.152 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 18(Integer), 3(Integer)
+2018-08-14 23:12:46.153 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:46.153 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:46.154 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:46.154 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:46.168 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:46.168 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 21(Integer), 3(Integer)
+2018-08-14 23:12:46.169 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:46.170 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:46.170 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:46.171 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:46.185 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:46.185 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 24(Integer), 3(Integer)
+2018-08-14 23:12:46.186 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:46.187 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:46.187 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:46.188 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:46.203 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:46.204 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 27(Integer), 3(Integer)
+2018-08-14 23:12:46.204 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:46.205 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:46.205 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:46.206 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:47.271 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:47.272 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 30(Integer), 3(Integer)
+2018-08-14 23:12:47.275 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:47.276 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:47.276 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:47.277 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:12:47.303 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:12:47.303 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 33(Integer), 3(Integer)
+2018-08-14 23:12:47.304 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 23:12:47.305 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:12:47.305 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:12:47.307 [http-nio-8080-exec-5] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:13:00.455 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 23:13:00.456 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Integer), 0(Integer), 3(Integer)
+2018-08-14 23:13:00.457 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 3
+2018-08-14 23:13:00.457 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.enable_status = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 23:13:00.457 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Integer)
+2018-08-14 23:13:00.458 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 23:13:32.681 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryByShopId - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc where s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id and s.shop_id = ? 
+2018-08-14 23:13:32.681 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryByShopId - ==> Parameters: 44(Long)
+2018-08-14 23:13:32.682 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ShopMapper.queryByShopId - <==      Total: 1
+2018-08-14 23:13:32.683 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
+2018-08-14 23:13:32.683 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
+2018-08-14 23:13:32.684 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
+2018-08-14 23:13:42.404 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
+2018-08-14 23:13:42.404 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
+2018-08-14 23:13:42.406 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 3

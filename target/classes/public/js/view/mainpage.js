@@ -44,7 +44,7 @@ $(function(){
 	//点击分类，去该分类的店铺
 	$(".row").on('click','.shop-classify',function(e){
 		var shopCategoryId=e.currentTarget.dataset.category;
-		var newUrl = '/frontend/shoplist?parentId='+shopCategoryId;
+		var newUrl = '/frontend/viewshoplist?parentId='+shopCategoryId;
 		window.location.href=newUrl;
 	});
 	
