@@ -1,207 +1,56 @@
-2018-08-09 08:17:26.876 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/test/5733820180809081726.png
-2018-08-09 08:18:21.455 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/test/3242320180809081821.png
-2018-08-09 08:18:46.818 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/test/9301420180809081846.png
-2018-08-09 08:19:12.997 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/test/2288120180809081912.png
-2018-08-09 09:06:28.812 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:06:34.664 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:06:34.695 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9(String), 7777(String), null, null, null, 2(Integer), 2018-08-09 09:06:34.639(Timestamp), 2018-08-09 09:06:34.639(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:06:34.712 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:10:20.100 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:10:24.607 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/4830320180809091024.png
-2018-08-09 09:10:24.881 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:10:24.915 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/4830320180809091024.png(String), null, null, 2(Integer), 2018-08-09 09:10:24.517(Timestamp), 2018-08-09 09:10:24.517(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:10:24.916 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:14:09.160 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:14:13.407 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/7044820180809091413.png
-2018-08-09 09:14:13.743 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:14:13.776 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/7044820180809091413.png(String), null, null, 2(Integer), 2018-08-09 09:14:13.404(Timestamp), 2018-08-09 09:14:13.404(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:14:13.777 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:14:13.784 [main] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/2555420180809091413.png
-2018-08-09 09:19:59.638 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:20:03.930 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/1902420180809092003.png
-2018-08-09 09:20:04.274 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:20:04.306 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/1902420180809092003.png(String), null, null, 2(Integer), 2018-08-09 09:20:03.923(Timestamp), 2018-08-09 09:20:03.923(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:20:04.307 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:20:04.313 [main] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/5992720180809092004.png
-2018-08-09 09:20:49.651 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:20:54.488 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/7484420180809092054.png
-2018-08-09 09:20:54.816 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:20:54.852 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/7484420180809092054.png(String), null, null, 2(Integer), 2018-08-09 09:20:54.485(Timestamp), 2018-08-09 09:20:54.485(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:20:54.853 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:20:54.863 [main] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/7704720180809092054.png
-2018-08-09 09:26:07.557 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:26:12.079 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/4854720180809092612.png
-2018-08-09 09:26:12.405 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:26:12.441 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/4854720180809092612.png(String), null, null, 2(Integer), 2018-08-09 09:26:12.077(Timestamp), 2018-08-09 09:26:12.077(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:26:12.442 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:26:12.449 [main] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/4597720180809092612.png
-2018-08-09 09:29:14.404 [main] DEBUG com.bob.test.ProductServiceTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 09:29:18.627 [main] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/3609020180809092918.png
-2018-08-09 09:29:18.908 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 09:29:18.938 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 8-9-1(String), 7777(String), /upload/item/shop/44/3609020180809092918.png(String), null, null, 2(Integer), 2018-08-09 09:29:18.625(Timestamp), 2018-08-09 09:29:18.625(Timestamp), 1(Integer), null, 44(Long)
-2018-08-09 09:29:18.939 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 09:29:18.945 [main] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/1959020180809092918.png
-2018-08-09 09:29:19.189 [main] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) 
-2018-08-09 09:29:19.191 [main] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/1959020180809092918.png(String), null, null, 2018-08-09 09:29:19.13(Timestamp), null
-2018-08-09 09:29:19.192 [main] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 1
-2018-08-09 15:48:05.281 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 15:51:14.611 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 16:21:24.672 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 17:08:03.328 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 17:25:13.788 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
-2018-08-09 17:25:13.848 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
-2018-08-09 17:25:13.982 [http-nio-8080-exec-6] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 1
-2018-08-09 17:25:14.000 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==>  Preparing: SELECT * FROM tb_area ORDER BY priority DESC 
-2018-08-09 17:25:14.001 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - ==> Parameters: 
-2018-08-09 17:25:14.003 [http-nio-8080-exec-6] DEBUG com.bob.o2o.dao.AreaMapper.findAll - <==      Total: 2
-2018-08-09 17:26:34.128 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
-2018-08-09 17:26:34.129 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
-2018-08-09 17:26:34.168 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
-2018-08-09 17:26:34.169 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
-2018-08-09 17:26:34.169 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 1(Long)
-2018-08-09 17:26:34.197 [http-nio-8080-exec-1] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
-2018-08-09 20:03:06.063 [main] DEBUG com.bob.test.ProductMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 20:03:11.043 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:03:11.102 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: map3(String), 好听(String), null, null, null, 1(Integer), 2018-08-09 20:03:10.455(Timestamp), null, 1(Integer), null, 44(Long)
-2018-08-09 20:03:11.131 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:05:11.065 [main] DEBUG com.bob.test.ProductMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 20:05:15.661 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:05:15.709 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: map3(String), 好听(String), null, null, null, 1(Integer), 2018-08-09 20:05:15.253(Timestamp), null, 1(Integer), null, 44(Long)
-2018-08-09 20:05:15.756 [main] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:05:31.835 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 20:05:55.609 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:05:55.700 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:05:55.811 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:08:22.141 [http-nio-8080-exec-8] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/8123420180809200822.jpg
-2018-08-09 20:08:24.434 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:08:24.907 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/8123420180809200822.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:07:54.477(Timestamp), 2018-08-09 20:07:54.477(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:08:24.914 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:08:55.834 [http-nio-8080-exec-8] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/6109520180809200855.jpg
-2018-08-09 20:08:57.049 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:08:57.096 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/6109520180809200855.jpg(String), null, null, 2018-08-09 20:08:56.674(Timestamp), 22(Long)
-2018-08-09 20:08:57.108 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 1
-2018-08-09 20:09:29.253 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 20:10:03.875 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:10:03.947 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:10:03.982 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:11:11.838 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:11:11.840 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:11:11.842 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:11:55.032 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-09 20:12:19.694 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:12:19.768 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:12:19.796 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:12:43.357 [http-nio-8080-exec-10] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/5435420180809201243.jpg
-2018-08-09 20:12:43.438 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:12:43.445 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/5435420180809201243.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:12:43.353(Timestamp), 2018-08-09 20:12:43.353(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:12:43.446 [http-nio-8080-exec-10] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:12:43.447 [http-nio-8080-exec-10] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/8518820180809201243.jpg
-2018-08-09 20:12:43.661 [http-nio-8080-exec-10] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:12:43.662 [http-nio-8080-exec-10] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/8518820180809201243.jpg(String), null, null, 2018-08-09 20:12:43.631(Timestamp), 23(Long)
-2018-08-09 20:12:43.662 [http-nio-8080-exec-10] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 1
-2018-08-09 20:13:39.948 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:13:39.949 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:13:39.951 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:13:41.758 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:13:41.758 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:13:41.762 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:14:07.684 [http-nio-8080-exec-4] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/3541020180809201407.jpg
-2018-08-09 20:14:07.715 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:14:07.717 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/3541020180809201407.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:14:07.684(Timestamp), 2018-08-09 20:14:07.684(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:14:07.717 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:14:07.718 [http-nio-8080-exec-4] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/6041320180809201407.jpg
-2018-08-09 20:14:07.825 [http-nio-8080-exec-4] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:14:07.826 [http-nio-8080-exec-4] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/6041320180809201407.jpg(String), null, null, 2018-08-09 20:14:07.824(Timestamp), 24(Long)
-2018-08-09 20:14:07.826 [http-nio-8080-exec-4] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 1
-2018-08-09 20:14:34.961 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:14:34.961 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:14:34.964 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:14:52.091 [http-nio-8080-exec-3] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/3152920180809201452.jpg
-2018-08-09 20:14:52.126 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:14:52.127 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/3152920180809201452.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:14:52.091(Timestamp), 2018-08-09 20:14:52.091(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:14:52.127 [http-nio-8080-exec-3] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:14:52.128 [http-nio-8080-exec-3] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/9192420180809201452.jpg
-2018-08-09 20:14:52.310 [http-nio-8080-exec-3] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:14:52.311 [http-nio-8080-exec-3] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/9192420180809201452.jpg(String), null, null, 2018-08-09 20:14:52.309(Timestamp), 25(Long)
-2018-08-09 20:14:52.312 [http-nio-8080-exec-3] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 1
-2018-08-09 20:15:00.434 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:15:00.435 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:15:00.436 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:15:41.706 [http-nio-8080-exec-9] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/9072020180809201541.jpg
-2018-08-09 20:15:41.740 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:15:41.741 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/9072020180809201541.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:15:41.706(Timestamp), 2018-08-09 20:15:41.706(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:15:41.742 [http-nio-8080-exec-9] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:15:41.742 [http-nio-8080-exec-9] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/8717720180809201541.jpg
-2018-08-09 20:15:41.776 [http-nio-8080-exec-9] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/8944420180809201541.jpg
-2018-08-09 20:15:42.160 [http-nio-8080-exec-9] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:15:42.161 [http-nio-8080-exec-9] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/8717720180809201541.jpg(String), null, null, 2018-08-09 20:15:41.776(Timestamp), 26(Long), /upload/item/shop/44/8944420180809201541.jpg(String), null, null, 2018-08-09 20:15:42.159(Timestamp), 26(Long)
-2018-08-09 20:15:42.162 [http-nio-8080-exec-9] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 2
-2018-08-09 20:15:45.199 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:15:45.200 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:15:45.202 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:16:33.066 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:16:33.067 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:16:33.070 [http-nio-8080-exec-7] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:16:35.755 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:16:35.757 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:16:35.759 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:16:59.156 [http-nio-8080-exec-8] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/3309020180809201659.jpg
-2018-08-09 20:16:59.256 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:16:59.258 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 22(String), /upload/item/shop/44/3309020180809201659.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:16:59.156(Timestamp), 2018-08-09 20:16:59.156(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:16:59.258 [http-nio-8080-exec-8] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:16:59.259 [http-nio-8080-exec-8] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/4746620180809201659.jpg
-2018-08-09 20:16:59.300 [http-nio-8080-exec-8] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/9026320180809201659.jpg
-2018-08-09 20:16:59.422 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:16:59.423 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/4746620180809201659.jpg(String), null, null, 2018-08-09 20:16:59.3(Timestamp), 27(Long), /upload/item/shop/44/9026320180809201659.jpg(String), null, null, 2018-08-09 20:16:59.42(Timestamp), 27(Long)
-2018-08-09 20:16:59.424 [http-nio-8080-exec-8] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 2
-2018-08-09 20:18:55.961 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:18:55.961 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:18:55.962 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:19:02.620 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:19:02.621 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:19:02.622 [http-nio-8080-exec-4] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:19:52.773 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:19:52.774 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:19:52.776 [http-nio-8080-exec-3] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:19:56.756 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:19:56.757 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:19:56.758 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:19:58.789 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:19:58.789 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:19:58.792 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:20:01.858 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:20:01.859 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:20:01.861 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:20:03.785 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:20:03.785 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:20:03.787 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:20:33.033 [http-nio-8080-exec-7] DEBUG com.bob.o2o.utils.ImageUtil - currnt complete addr is:d:/o2o/image/upload/item/shop/44/5899420180809202033.jpg
-2018-08-09 20:20:33.061 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==>  Preparing: insert into `tb_product` ( `product_name`, `product_desc`, `img_addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `last_edit_time`, `enable_status`, `product_category_id`, `shop_id` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2018-08-09 20:20:33.062 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - ==> Parameters: 22(String), 222(String), /upload/item/shop/44/5899420180809202033.jpg(String), 2(String), 2(String), 2(Integer), 2018-08-09 20:20:33.033(Timestamp), 2018-08-09 20:20:33.033(Timestamp), 1(Integer), 4(Long), 44(Long)
-2018-08-09 20:20:33.063 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.ProductMapper.insertProduct - <==    Updates: 1
-2018-08-09 20:20:33.064 [http-nio-8080-exec-7] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/8164420180809202033.jpg
-2018-08-09 20:20:33.100 [http-nio-8080-exec-7] DEBUG com.bob.o2o.utils.ImageUtil - current normalImg  addr is:d:/o2o/image/upload/item/shop/44/3746920180809202033.jpg
-2018-08-09 20:20:33.468 [http-nio-8080-exec-7] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==>  Preparing: insert into `tb_product_img` ( `img_addr`, `img_desc`, `priority`, `create_time`, `product_id` ) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-08-09 20:20:33.470 [http-nio-8080-exec-7] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - ==> Parameters: /upload/item/shop/44/8164420180809202033.jpg(String), null, null, 2018-08-09 20:20:33.1(Timestamp), 28(Long), /upload/item/shop/44/3746920180809202033.jpg(String), null, null, 2018-08-09 20:20:33.467(Timestamp), 28(Long)
-2018-08-09 20:20:33.470 [http-nio-8080-exec-7] DEBUG c.b.o2o.dao.ProductImgMapper.batchInsertProductImg - <==    Updates: 2
-2018-08-09 20:21:07.939 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:21:07.939 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:21:07.942 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:21:11.645 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:21:11.645 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:21:11.647 [http-nio-8080-exec-10] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:22:16.399 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:22:16.399 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:22:16.402 [http-nio-8080-exec-6] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:22:16.937 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:22:16.938 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:22:16.939 [http-nio-8080-exec-1] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:22:17.060 [http-nio-8080-exec-9] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:22:17.061 [http-nio-8080-exec-9] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:22:17.062 [http-nio-8080-exec-9] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:22:17.302 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:22:17.302 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:22:17.304 [http-nio-8080-exec-2] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
-2018-08-09 20:22:17.423 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==>  Preparing: SELECT `product_category_id`, `product_category_name`, `priority`, `create_time` FROM `tb_product_category` where shop_id = ? order by priority desc 
-2018-08-09 20:22:17.424 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - ==> Parameters: 44(Long)
-2018-08-09 20:22:17.426 [http-nio-8080-exec-8] DEBUG c.b.o.d.P.queryProductCategoryByShopId - <==      Total: 5
+2018-08-14 10:21:28.278 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 10:21:40.724 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 10:21:40.758 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 10:21:40.803 [http-nio-8080-exec-4] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 10:21:40.820 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==>  Preparing: SELECT `line_id`, `line_name`, `line_link`, `line_img`, `priority`, `enable_status`, `create_time`, `last_edit_time` FROM `tb_head_line` WHERE enable_status = ? 
+2018-08-14 10:21:40.822 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==> Parameters: 1(Integer)
+2018-08-14 10:21:40.825 [http-nio-8080-exec-4] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - <==      Total: 2
+2018-08-14 10:30:18.743 [restartedMain] DEBUG com.bob.Application - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 10:31:31.004 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==>  Preparing: select * FROM `tb_shop_category` WHERE parent_id is null order by priority desc 
+2018-08-14 10:31:31.038 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - ==> Parameters: 
+2018-08-14 10:31:31.057 [http-nio-8080-exec-7] DEBUG c.bob.o2o.dao.ShopCategoryMapper.queryShopCategory - <==      Total: 2
+2018-08-14 10:31:31.072 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==>  Preparing: SELECT `line_id`, `line_name`, `line_link`, `line_img`, `priority`, `enable_status`, `create_time`, `last_edit_time` FROM `tb_head_line` WHERE enable_status = ? 
+2018-08-14 10:31:31.076 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - ==> Parameters: 1(Integer)
+2018-08-14 10:31:31.080 [http-nio-8080-exec-7] DEBUG com.bob.o2o.dao.HeadLineMapper.queryHeadLineList - <==      Total: 2
+2018-08-14 15:22:15.877 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:22:19.934 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:22:19.970 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 
+2018-08-14 15:22:19.992 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:22:20.001 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:22:20.002 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 0(Integer), 100(Integer)
+2018-08-14 15:22:20.028 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
+2018-08-14 15:24:21.103 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:24:24.772 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:24:24.815 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long)
+2018-08-14 15:24:24.857 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:24:24.865 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:24:24.866 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 0(Integer), 100(Integer)
+2018-08-14 15:24:24.867 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 0
+2018-08-14 15:26:03.190 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:26:06.821 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:26:06.857 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 
+2018-08-14 15:26:06.883 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:26:06.892 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:26:06.893 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 0(Integer), 100(Integer)
+2018-08-14 15:26:06.919 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
+2018-08-14 15:28:12.697 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:28:16.324 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:28:16.360 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 
+2018-08-14 15:28:16.377 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:28:16.386 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:28:16.389 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 0(Integer), 100(Integer)
+2018-08-14 15:28:16.416 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
+2018-08-14 15:28:35.817 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:28:39.479 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:28:39.520 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 
+2018-08-14 15:28:39.549 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:28:39.557 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:28:39.558 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 0(Integer), 100(Integer)
+2018-08-14 15:28:39.581 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 31
+2018-08-14 15:33:16.469 [main] DEBUG com.bob.test.ShopMapperTest - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-14 15:33:20.072 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==>  Preparing: select count(1) from `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id 
+2018-08-14 15:33:20.117 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - ==> Parameters: 3(Long)
+2018-08-14 15:33:20.148 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopCount - <==      Total: 1
+2018-08-14 15:33:20.157 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==>  Preparing: SELECT s.`shop_id`, s.`shop_name`, s.`shop_desc`, s.`shop_addr`, s.`phone`, s.`shop_img`, s.`priority`, s.`create_time`, s.`last_edit_time`, s.`enable_status`, s.`advice`, a.`area_id`, a.area_name, sc.`shop_category_id`, sc.shop_category_name FROM `tb_shop` s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in ( select shop_category_id from tb_shop_category where parent_id = ? ) and s.area_id = a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,? 
+2018-08-14 15:33:20.157 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - ==> Parameters: 3(Long), 0(Integer), 100(Integer)
+2018-08-14 15:33:20.176 [main] DEBUG com.bob.o2o.dao.ShopMapper.queryShopList - <==      Total: 18

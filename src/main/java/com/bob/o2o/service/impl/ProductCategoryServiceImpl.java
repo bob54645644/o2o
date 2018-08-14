@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bob.o2o.dao.ProductCategoryMapper;
+import com.bob.o2o.dao.ProductMapper;
 import com.bob.o2o.dto.ProductCategoryExecution;
 import com.bob.o2o.entity.ProductCategory;
 import com.bob.o2o.enums.ProductCategoryStateEnum;
@@ -23,6 +24,9 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
 	
 	@Autowired
 	private ProductCategoryMapper productCategoryMapper;
+	
+	@Autowired
+	private ProductMapper productMapper;
 
 	@Override
 	public List<ProductCategory> getProductCategoryByShopId(Long shopId) {
@@ -56,6 +60,15 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
 		if(productCategoryId >0 && shopId >0) {
 			
 			//解除与tb_product的关联
+			try {
+				int effectedNum = productMapper.updateProductCategoryIdNull(productCategoryId);
+				//使用<0是因为，有可能该商品类别没有商品与之对应
+				if(effectedNum<0) {
+					throw new ProductOperationException("商品类别更新失败！");
+				}
+			}catch(Exception e) {
+				throw new ProductOperationException(e.getMessage());
+			}
 			
 			//删除操作
 			try {

@@ -24,7 +24,6 @@ import com.bob.o2o.dto.ProductCategoryExecution;
 import com.bob.o2o.dto.ProductExecution;
 import com.bob.o2o.entity.Product;
 import com.bob.o2o.entity.ProductCategory;
-import com.bob.o2o.entity.ProductImg;
 import com.bob.o2o.entity.Shop;
 import com.bob.o2o.enums.ProductCategoryStateEnum;
 import com.bob.o2o.enums.ProductStateEnum;
@@ -55,6 +54,150 @@ public class ProductManageController {
 	@Autowired
 	private MultipartResolver multipartResolver;
 
+	// 修改产品信息
+	@PostMapping("/modifyproduct")
+	public Map<String, Object> modifyproduct(HttpServletRequest request) {
+		Map<String, Object> modelMap = new HashMap<>();
+		//如果是上下架操作
+		boolean statusChange = HttpServletRequestUtil.getBoolean(request, "statusChange");
+		// 1、验证码校验
+		if (!statusChange && !CodeUtil.checkVerifyCode(request)) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "验证码错误！");
+			return modelMap;
+		}
+
+		Product product = null;
+		ImageHolder thumbnail = null;
+		List<ImageHolder> productImgList = new ArrayList<>();
+
+		// 2、处理product 信息
+		try {
+			Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+			if (currentShop != null && currentShop.getShopId() != null) {
+				String productStr = HttpServletRequestUtil.getString(request, "productStr");
+				ObjectMapper mapper = new ObjectMapper();
+				product = mapper.readValue(productStr, Product.class);
+				product.setShop(currentShop);
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "shopId为空！");
+				return modelMap;
+			}
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+			return modelMap;
+		}
+		// 获取图片信息,有图片信息则相应对象赋值
+		if (multipartResolver.isMultipart(request)) {
+			MultipartHttpServletRequest multipartHttpServletRequest = multipartResolver.resolveMultipart(request);
+
+			// 3、处理缩略图
+			try {
+				MultipartFile thumbnailMultipart = multipartHttpServletRequest.getFile("thumbnail");
+				if (thumbnailMultipart != null) {
+					thumbnail = new ImageHolder(thumbnailMultipart.getOriginalFilename(),
+							thumbnailMultipart.getInputStream());
+				}
+			} catch (Exception e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+				return modelMap;
+			}
+			// 4、处理详情图列表
+			try {
+				for (int i = 0; i < 6; i++) {
+					MultipartFile file = multipartHttpServletRequest.getFile("productImg" + i);
+					if (file != null) {
+						ImageHolder imageHolder = new ImageHolder(file.getOriginalFilename(), file.getInputStream());
+						productImgList.add(imageHolder);
+					} else {
+						break;
+					}
+				}
+
+			} catch (Exception e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+				return modelMap;
+			}
+		}
+		// 5、提交
+		try {
+			ProductExecution pe = productService.updateProduct(product, thumbnail, productImgList);
+			if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
+				modelMap.put("success", true);
+				return modelMap;
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", pe.getStateInfo());
+				return modelMap;
+			}
+		} catch (ProductOperationException e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+			return modelMap;
+		}
+	}
+
+	// 通过productId获取产品信息，用于修改产品信息是用
+	@GetMapping("/getproductbyid")
+	public Map<String, Object> getProductById(HttpServletRequest request) {
+		Map<String, Object> modelMap = new HashMap<>();
+		try {
+			Long productId = HttpServletRequestUtil.getLong(request, "productId");
+			ProductExecution pe = productService.queryProductByid(productId);
+			Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+			if (currentShop != null) {
+				List<ProductCategory> productCategoryList = productCategoryService
+						.getProductCategoryByShopId(currentShop.getShopId());
+				modelMap.put("productCategoryList", productCategoryList);
+			}else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "shopId为空");
+				return modelMap;
+			}
+			if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
+				modelMap.put("success", true);
+				modelMap.put("product", pe.getProduct());
+				return modelMap;
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", pe.getStateInfo());
+				return modelMap;
+			}
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+			return modelMap;
+		}
+	}
+	
+	//根据shopId查询产品列表
+	@GetMapping("/getproductlistbyshopId")
+	public Map<String,Object> getProductList(HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<>();
+		int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
+		int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
+		Shop currentShop = (Shop)request.getSession().getAttribute("currentShop");
+		if(pageIndex >-1 && pageSize >-1 && currentShop !=null
+				&& currentShop.getShopId() !=null) {
+			Product productCondition = new Product();
+			productCondition.setShop(currentShop);
+			ProductExecution pe = productService.getProductList(productCondition, pageIndex, pageSize);
+			modelMap.put("success", true);
+			modelMap.put("productList", pe.getProductList());
+			modelMap.put("count", pe.getCount());
+		}else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "查询条件不正确");
+		}
+		return modelMap;
+	}
+		
+		
+		
 	@PostMapping("/addproduct")
 	public Map<String, Object> addProduct(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<>();
@@ -156,6 +299,7 @@ public class ProductManageController {
 		}
 		return modelMap;
 	}
+	
 
 	// 批量添加商品类别
 	@PostMapping("/addpclist")

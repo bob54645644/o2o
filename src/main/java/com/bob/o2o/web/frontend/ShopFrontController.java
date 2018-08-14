@@ -41,4 +41,15 @@ public class ShopFrontController {
 	public String shopCategoryManagement() {
 		return "shop/productcategorymanagement";
 	}
+	//产品管理页面
+	@GetMapping("/productmanagement")
+	public String productmanagement() {
+		return "shop/productmanagement";
+	}
+	
+	//主页页面
+	@GetMapping("/mainpage")
+	public String mainPage() {
+		return "view/mainpage";
+	}
 }

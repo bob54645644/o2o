@@ -5,7 +5,6 @@ package com.bob.o2o.service.impl;
 * 类说明 
 */
 
-import java.io.File;
 import java.util.Date;
 import java.util.List;
 

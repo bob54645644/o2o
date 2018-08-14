@@ -1,6 +1,5 @@
 package com.bob.o2o.service;
 
-import java.io.File;
 
 import com.bob.o2o.dto.ImageHolder;
 import com.bob.o2o.dto.ShopExecution;

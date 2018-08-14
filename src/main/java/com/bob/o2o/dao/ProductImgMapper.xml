@@ -32,5 +32,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		)
 		</foreach>
 	</insert>
+	<!-- 通过productId查询商品详情图 -->
+	<select id="queryProductImgList" parameterType="long"
+	resultType="com.bob.o2o.entity.ProductImg">
+	SELECT 	
+	`product_img_id`, 
+	`img_addr`, 
+	`img_desc`, 
+	`priority`, 
+	`create_time` 
+	FROM 
+	`tb_product_img` 
+	where
+	product_id = #{productId}
+	order by
+	priority desc
+	</select>
+	<!-- 通过productId删除商品信息 -->
+	<delete id="deleteProductImgByProductId" parameterType="long">
+	delete from
+	`tb_product_img`
+	where
+	product_id = #{productId}
+	</delete>
 
 </mapper>

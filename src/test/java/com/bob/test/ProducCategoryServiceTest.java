@@ -65,8 +65,8 @@ public class ProducCategoryServiceTest {
 	@Test
 	@Ignore
 	public void testdeleteproductCategory() {
-		ProductCategoryExecution execution = productCategoryService.removeProductCategory(100,100);
+		ProductCategoryExecution execution = productCategoryService.removeProductCategory(3L,44L);
 		System.out.println(execution.getStateInfo());
 	}
-
+	
 }

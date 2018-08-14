@@ -81,4 +81,11 @@ public class HeadLine {
 	public void setLastEditTime(Date lastEditTime) {
 		this.lastEditTime = lastEditTime;
 	}
+	@Override
+	public String toString() {
+		return "HeadLine [lineId=" + lineId + ", lineName=" + lineName + ", lineLink=" + lineLink + ", lineImg="
+				+ lineImg + ", priority=" + priority + ", enableStatus=" + enableStatus + ", createTime=" + createTime
+				+ ", lastEditTime=" + lastEditTime + "]";
+	}
+	
 }

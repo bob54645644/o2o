@@ -104,8 +104,8 @@ public class ShopMapperTest {
 	}
 	@Test
 	public void testQueryShopList() {
-		PersonInfo personInfo = new PersonInfo();
-		personInfo.setUserId(1L);
+//		PersonInfo personInfo = new PersonInfo();
+//		personInfo.setUserId(1L);
 		
 		Area area = new Area();
 		area.setAreaId(2);
@@ -114,17 +114,18 @@ public class ShopMapperTest {
 //		shopCategory.setShopCategoryId(1L);
 		ShopCategory shopCategory2 = new ShopCategory();
 		shopCategory2.setShopCategoryId(3L);
+		
 		shopCategory.setParent(shopCategory2);
 		
 		Shop shop = new Shop();
-//		shop.setShopCategory(shopCategory);
+		shop.setShopCategory(shopCategory);
 //		shop.setArea(area);
 //		shop.setShopName("店");
 //		shop.setShopStatus(1);
 //		shop.setOwner(personInfo);
 		int count = shopMapper.queryShopCount(shop);
 		System.out.println("总数："+count);
-		List<Shop> shopList = shopMapper.queryShopList(shop, 10, 5);
+		List<Shop> shopList = shopMapper.queryShopList(shop, 0, 100);
 		System.out.println(shopList.size());
 	}
 }

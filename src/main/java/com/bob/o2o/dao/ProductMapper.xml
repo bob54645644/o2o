@@ -4,14 +4,44 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bob.o2o.dao.ProductMapper">
 	<resultMap type="com.bob.o2o.entity.Product"
-		id="ShopResultMap">
-		<id column="" property="" />
-		<result column="" property="" />
+		id="productResultMap">
+		<id column="product_id" property="productId" />
+		<result column="product_name" property="productName" />
+		<result column="product_desc" property="productDesc" />
+		<result column="img_addr" property="imgAddr" />
+		<result column="normal_price" property="normalPrice" />
+		<result column="promotion_price" property="promotionPrice" />
+		<result column="priority" property="priority" />
+		<result column="create_time" property="createTime" />
+		<result column="last_edit_time" property="lastEditTime" />
+		<result column="enable_status" property="enableStatus" />
+		<association property="productCategory"
+			column="product_category_id"
+			javaType="com.bob.o2o.entity.ProductCategory">
+			<id column="product_category_id" property="productCategoryId" />
+			<result column="product_category_name"
+				property="productCategoryName" />
+		</association>
+		<association property="shop" column="shop_id"
+			javaType="com.bob.o2o.entity.Shop">
+			<id column="shop_id" property="shopId" />
+			<!-- <result column="shop_name" property="shopName"/> <result column="owner_id" 
+				property="ownerId"/> -->
+		</association>
+		<collection property="productImgList" column="product_id"
+			ofType="com.bob.o2o.entity.ProductImg">
+			<id column="product_img_id" property="productImgId" />
+			<result column="img_addr" property="imgAddr" />
+			<result column="img_desc" property="imgDesc" />
+			<result column="priority" property="priority" />
+			<result column="create_time" property="createTime" />
+			<result column="product_id" property="productId" />
+		</collection>
 	</resultMap>
-	<!-- 新增店铺 -->
-	<insert id="insertProduct" 
-		parameterType="com.bob.o2o.entity.Product" useGeneratedKeys="true" 
-		keyProperty="productID" keyColumn="product_id">
+	<!-- 新增产品 -->
+	<insert id="insertProduct"
+		parameterType="com.bob.o2o.entity.Product" useGeneratedKeys="true"
+		keyProperty="productId" keyColumn="product_id">
 		insert into
 		`tb_product`
 		(
@@ -42,5 +72,167 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{shop.shopId}
 		)
 	</insert>
+	<!-- 根据productId查询商品 -->
+	<select id="queryProductById" resultMap="productResultMap"
+		parameterType="Long">
+		select
+		p.`product_id`,
+		p.`product_name`,
+		p.`product_desc`,
+		p.`img_addr`,
+		p.`normal_price`,
+		p.`promotion_price`,
+		p.`priority`,
+		p.`create_time`,
+		p.`last_edit_time`,
+		p.`enable_status`,
+		p.`product_category_id`,
+		p.`shop_id`,
 
+		pi.`product_img_id`,
+		pi.`img_addr`,
+		pi.`img_desc`,
+		pi.`priority`,
+		pi.`create_time`
+		from
+		`tb_product` p
+		left join
+		`tb_product_img` pi
+		on
+		p.`product_id` =
+		pi.`product_id`
+		where
+		p.`product_id` = #{productId}
+		order by
+		pi.priority
+		desc
+	</select>
+	<!-- 通过product里的信息查询product -->
+	<select id="queryProductList" resultMap="productResultMap">
+		select
+		`product_id`,
+		`product_name`,
+		`product_desc`,
+		`img_addr`,
+		`normal_price`,
+		`promotion_price`,
+		`priority`,
+		`create_time`,
+		`last_edit_time`,
+		`enable_status`,
+		`product_category_id`,
+		`shop_id`
+		from
+		`tb_product`
+		<where>
+			<!-- 通过shopId查询 -->
+			<if
+				test="productCondition.shop !=null
+			and productCondition.shop.shopId !=null">
+				and shop_id = #{productCondition.shop.shopId}
+			</if>
+			<!-- 通过产品类别id -->
+			<if
+				test="productCondition.productCategory !=null
+			and productCondition.productCategory.productCategoryId !=null">
+				and product_category_id =
+				#{productCondition.productCategory.productCategoryId}
+			</if>
+			<!-- 通过产品名称模糊查询 -->
+			<if test="productCondition.productName !=null">
+				and product_name like '%${productCondition.productName}%'
+			</if>
+			<!-- 通过产品状态查询 -->
+			<if test="productCondition.enableStatus !=null">
+				and enable_status = #{productCondition.enableStatus}
+			</if>
+		</where>
+		order by
+		priority desc
+		limit #{rowIndex},#{pageSize};
+
+	</select>
+
+	<!-- 通过product里的信息查询product数量 -->
+	<select id="queryProductCount" resultType="int">
+		select
+		count(1)
+		from
+		tb_product
+		<where>
+			<!-- 通过shopId查询 -->
+			<if
+				test="productCondition.shop !=null
+			and productCondition.shop.shopId !=null">
+				and shop_id = #{productCondition.shop.shopId}
+			</if>
+			<!-- 通过产品类别id -->
+			<if
+				test="productCondition.productCategory !=null
+			and productCondition.productCategory.productCategoryId !=null">
+				and product_category_id =
+				#{productCondition.productCategory.productCategoryId}
+			</if>
+			<!-- 通过产品名称模糊查询 -->
+			<if test="productCondition.productName !=null">
+				and product_name like '%${productCondition.productName}%'
+			</if>
+			<!-- 通过产品状态查询 -->
+			<if test="productCondition.enableStatus !=null">
+				and enable_status = #{productCondition.enableStatus}
+			</if>
+		</where>
+	</select>
+
+	<!-- 修改产品 -->
+	<update id="updateProduct"
+		parameterType="com.bob.o2o.entity.Product">
+		update
+		tb_product
+		<set>
+			<if test="productName !=null">
+				product_name = #{productName},
+			</if>
+			<if test="productDesc !=null">
+				product_desc = #{productDesc},
+			</if>
+			<if test="imgAddr !=null">
+				img_addr = #{imgAddr},
+			</if>
+			<if test="normalPrice != null">
+				normal_price = #{normalPrice},
+			</if>
+			<if test="promotionPrice !=null">
+				promotion_price = #{promotionPrice},
+			</if>
+			<if test="priority !=null">
+				priority = #{priority},
+			</if>
+			<if test="lastEditTime != null">
+				last_edit_time = #{lastEditTime},
+			</if>
+			<if test="enableStatus !=null">
+				enable_status = #{enableStatus},
+			</if>
+			<if
+				test="productCategory !=null
+		and productCategory.productCategoryId !=null">
+				product_category_id = #{productCategory.productCategoryId}
+			</if>
+		</set>
+		where
+		product_id = #{productId}
+		and
+		shop_id = #{shop.shopId}
+	</update>
+	<!-- 根据productCategoryId将 所有商品的productCategoryId置为null-->
+	<update id="updateProductCategoryIdNull" parameterType="long">
+		update 
+		tb_product
+		set
+		product_category_id
+		= null
+		where
+		product_category_id = #{productCategoryId}
+	</update>
 </mapper>

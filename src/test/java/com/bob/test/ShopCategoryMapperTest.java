@@ -28,20 +28,21 @@ public class ShopCategoryMapperTest {
 	@Test
 	public void testAQueryShopCategory() {
 		ShopCategory shopCategory = new ShopCategory();
-		List<ShopCategory> list = shopCategoryMapper.queryShopCategory(shopCategory);
+		List<ShopCategory> list = shopCategoryMapper.queryShopCategory(null);
 		System.out.println(list.size());
+		System.out.println(list);
 		
 		
 		
 		
-		ShopCategory shopCategory2 = new ShopCategory();
-		shopCategory2.setShopCategoryId(3L);
-		
-		ShopCategory shopCategory3 = new ShopCategory();
-		shopCategory3.setParent(shopCategory2);
-		List<ShopCategory> list2 = shopCategoryMapper.queryShopCategory(shopCategory3);
-		System.out.println(list2.size());
-		System.out.println(list2);
+//		ShopCategory shopCategory2 = new ShopCategory();
+//		shopCategory2.setShopCategoryId(3L);
+//		
+//		ShopCategory shopCategory3 = new ShopCategory();
+//		shopCategory3.setParent(shopCategory2);
+//		List<ShopCategory> list2 = shopCategoryMapper.queryShopCategory(shopCategory3);
+//		System.out.println(list2.size());
+//		System.out.println(list2);
 		
 	}
 

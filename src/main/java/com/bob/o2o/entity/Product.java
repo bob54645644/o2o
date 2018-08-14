@@ -25,7 +25,7 @@ import java.util.List;
 
 public class Product {
 	//主键ID
-	private Long productID;
+	private Long productId;
 	//商品名
 	private String productName;
 	//商品描述
@@ -52,11 +52,11 @@ public class Product {
 	private ProductCategory productCategory;
 	//商铺类别
 	private Shop shop;
-	public Long getProductID() {
-		return productID;
+	public Long getProductId() {
+		return productId;
 	}
-	public void setProductID(Long productID) {
-		this.productID = productID;
+	public void setProductId(Long productId) {
+		this.productId = productId;
 	}
 	public String getProductName() {
 		return productName;
@@ -135,6 +135,14 @@ public class Product {
 	}
 	public void setShop(Shop shop) {
 		this.shop = shop;
+	}
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", productDesc=" + productDesc
+				+ ", imgAddr=" + imgAddr + ", normalPrice=" + normalPrice + ", promotionPrice=" + promotionPrice
+				+ ", priority=" + priority + ", createTime=" + createTime + ", lastEditTime=" + lastEditTime
+				+ ", enableStatus=" + enableStatus + ", productImgList=" + productImgList + ", productCategory="
+				+ productCategory + ", shop=" + shop + "]";
 	}
 	
 

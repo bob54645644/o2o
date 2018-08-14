@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
@@ -28,6 +29,7 @@ public class ProductImgMapperTest {
 	private ProductImgMapper imgMapper;
 	
 	@Test
+	@Ignore
 	public void testbatchInsertImg() {
 		ProductImg productImg1 = new ProductImg();
 		ProductImg productImg2 = new ProductImg();
@@ -43,6 +45,19 @@ public class ProductImgMapperTest {
 		list.add(productImg2);
 		
 		int i = imgMapper.batchInsertProductImg(list);
+		System.out.println(i);
+	}
+	@Test
+	@Ignore
+	public void testQueryProductImg() {
+		List<ProductImg> list = imgMapper.queryProductImgList(88);
+		System.out.println(list);
+	}
+	
+	@Test
+	@Ignore
+	public void testDeleteProductImg() {
+		int i = imgMapper.deleteProductImgByProductId(26L);
 		System.out.println(i);
 	}
 

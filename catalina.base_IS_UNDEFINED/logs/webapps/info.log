@@ -1,48 +1,24 @@
-2018-08-09 09:06:28.806 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 11932 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:06:28.822 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:06:33.856 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 5.408 seconds (JVM running for 6.941)
-2018-08-09 09:10:20.099 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 8884 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:10:20.102 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:10:23.947 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 4.159 seconds (JVM running for 5.487)
-2018-08-09 09:14:09.159 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 14372 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:14:09.162 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:14:12.773 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 3.897 seconds (JVM running for 5.174)
-2018-08-09 09:19:59.636 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 10348 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:19:59.641 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:20:03.325 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 3.979 seconds (JVM running for 5.276)
-2018-08-09 09:20:49.650 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 28448 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:20:49.653 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:20:53.768 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 4.432 seconds (JVM running for 5.746)
-2018-08-09 09:26:07.557 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 13260 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:26:07.563 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:26:11.502 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 4.309 seconds (JVM running for 5.645)
-2018-08-09 09:29:14.403 [main] INFO  com.bob.test.ProductServiceTest - Starting ProductServiceTest on DESKTOP-6V9R83N with PID 11172 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 09:29:14.407 [main] INFO  com.bob.test.ProductServiceTest - No active profile set, falling back to default profiles: default
-2018-08-09 09:29:18.050 [main] INFO  com.bob.test.ProductServiceTest - Started ProductServiceTest in 3.929 seconds (JVM running for 5.231)
-2018-08-09 15:48:05.277 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 27584 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 15:48:05.284 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 15:48:13.093 [restartedMain] INFO  com.bob.Application - Started Application in 8.307 seconds (JVM running for 9.327)
-2018-08-09 15:51:14.607 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 7796 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 15:51:14.613 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 15:51:21.020 [restartedMain] INFO  com.bob.Application - Started Application in 6.831 seconds (JVM running for 7.728)
-2018-08-09 16:21:24.666 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 21256 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 16:21:24.675 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 16:21:32.281 [restartedMain] INFO  com.bob.Application - Started Application in 8.084 seconds (JVM running for 9.164)
-2018-08-09 17:08:03.324 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 7980 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 17:08:03.330 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 17:08:11.085 [restartedMain] INFO  com.bob.Application - Started Application in 8.197 seconds (JVM running for 9.101)
-2018-08-09 20:03:06.062 [main] INFO  com.bob.test.ProductMapperTest - Starting ProductMapperTest on DESKTOP-6V9R83N with PID 12100 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 20:03:06.066 [main] INFO  com.bob.test.ProductMapperTest - No active profile set, falling back to default profiles: default
-2018-08-09 20:03:10.008 [main] INFO  com.bob.test.ProductMapperTest - Started ProductMapperTest in 4.31 seconds (JVM running for 6.644)
-2018-08-09 20:05:11.064 [main] INFO  com.bob.test.ProductMapperTest - Starting ProductMapperTest on DESKTOP-6V9R83N with PID 24868 (started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 20:05:11.067 [main] INFO  com.bob.test.ProductMapperTest - No active profile set, falling back to default profiles: default
-2018-08-09 20:05:14.998 [main] INFO  com.bob.test.ProductMapperTest - Started ProductMapperTest in 4.237 seconds (JVM running for 5.455)
-2018-08-09 20:05:31.831 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 3652 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 20:05:31.840 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 20:05:40.377 [restartedMain] INFO  com.bob.Application - Started Application in 9.02 seconds (JVM running for 9.992)
-2018-08-09 20:09:29.248 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 26208 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 20:09:29.255 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 20:09:37.418 [restartedMain] INFO  com.bob.Application - Started Application in 8.645 seconds (JVM running for 9.621)
-2018-08-09 20:11:55.028 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 26304 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
-2018-08-09 20:11:55.034 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
-2018-08-09 20:12:02.744 [restartedMain] INFO  com.bob.Application - Started Application in 8.227 seconds (JVM running for 9.307)
+2018-08-14 10:21:28.176 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 14812 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 10:21:28.303 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
+2018-08-14 10:21:34.688 [restartedMain] INFO  com.bob.Application - Started Application in 6.934 seconds (JVM running for 7.863)
+2018-08-14 10:30:18.738 [restartedMain] INFO  com.bob.Application - Starting Application on DESKTOP-6V9R83N with PID 10964 (E:\eclipse-javaee\O2O\target\classes started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 10:30:18.749 [restartedMain] INFO  com.bob.Application - No active profile set, falling back to default profiles: default
+2018-08-14 10:30:25.048 [restartedMain] INFO  com.bob.Application - Started Application in 6.72 seconds (JVM running for 7.856)
+2018-08-14 15:22:15.876 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 17564 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:22:15.878 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:22:19.192 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.659 seconds (JVM running for 5.074)
+2018-08-14 15:24:21.102 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 20364 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:24:21.104 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:24:24.298 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.525 seconds (JVM running for 4.63)
+2018-08-14 15:26:03.188 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 22552 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:26:03.193 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:26:06.368 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.489 seconds (JVM running for 4.594)
+2018-08-14 15:28:12.696 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 18948 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:28:12.699 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:28:15.869 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.497 seconds (JVM running for 4.57)
+2018-08-14 15:28:35.816 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 21264 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:28:35.819 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:28:39.003 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.5 seconds (JVM running for 4.576)
+2018-08-14 15:33:16.468 [main] INFO  com.bob.test.ShopMapperTest - Starting ShopMapperTest on DESKTOP-6V9R83N with PID 16512 (started by DELL in E:\eclipse-javaee\O2O)
+2018-08-14 15:33:16.470 [main] INFO  com.bob.test.ShopMapperTest - No active profile set, falling back to default profiles: default
+2018-08-14 15:33:19.616 [main] INFO  com.bob.test.ShopMapperTest - Started ShopMapperTest in 3.449 seconds (JVM running for 4.528)
