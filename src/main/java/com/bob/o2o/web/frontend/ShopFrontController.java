@@ -57,4 +57,14 @@ public class ShopFrontController {
 	public String viewshopList() {
 		return "view/viewshoplist";
 	}
+	//店铺详情
+	@GetMapping("/shopdetail")
+	public String shopDetail() {
+		return "view/shopdetail";
+	}
+	//商品详情
+	@GetMapping("/productdetail")
+	public String productDetail() {
+		return "view/productdetail";
+	}
 }
