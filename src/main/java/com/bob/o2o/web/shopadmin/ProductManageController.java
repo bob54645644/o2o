@@ -27,7 +27,7 @@ import com.bob.o2o.entity.ProductCategory;
 import com.bob.o2o.entity.Shop;
 import com.bob.o2o.enums.ProductCategoryStateEnum;
 import com.bob.o2o.enums.ProductStateEnum;
-import com.bob.o2o.execeptions.ProductOperationException;
+import com.bob.o2o.exceptions.ProductOperationException;
 import com.bob.o2o.service.ProductCategoryService;
 import com.bob.o2o.service.ProductService;
 import com.bob.o2o.utils.CodeUtil;

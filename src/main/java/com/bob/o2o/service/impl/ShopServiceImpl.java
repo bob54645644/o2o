@@ -17,7 +17,7 @@ import com.bob.o2o.dto.ImageHolder;
 import com.bob.o2o.dto.ShopExecution;
 import com.bob.o2o.entity.Shop;
 import com.bob.o2o.enums.ShopStateEnum;
-import com.bob.o2o.execeptions.ShopOperationException;
+import com.bob.o2o.exceptions.ShopOperationException;
 import com.bob.o2o.service.ShopService;
 import com.bob.o2o.utils.ImageUtil;
 import com.bob.o2o.utils.PageCalculator;

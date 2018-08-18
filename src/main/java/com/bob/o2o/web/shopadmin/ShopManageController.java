@@ -1,47 +1,33 @@
 package com.bob.o2o.web.shopadmin;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
-import org.mockito.internal.matchers.Contains;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 import com.bob.o2o.dto.ImageHolder;
 import com.bob.o2o.dto.ShopExecution;
 import com.bob.o2o.entity.Area;
 import com.bob.o2o.entity.PersonInfo;
-import com.bob.o2o.entity.ProductCategory;
 import com.bob.o2o.entity.Shop;
 import com.bob.o2o.entity.ShopCategory;
 import com.bob.o2o.enums.ShopStateEnum;
-import com.bob.o2o.execeptions.ShopOperationException;
+import com.bob.o2o.exceptions.ShopOperationException;
 import com.bob.o2o.service.AreaService;
-import com.bob.o2o.service.ProductCategoryService;
 import com.bob.o2o.service.ShopCategoryService;
 import com.bob.o2o.service.ShopService;
 import com.bob.o2o.utils.CodeUtil;
 import com.bob.o2o.utils.HttpServletRequestUtil;
-import com.bob.o2o.utils.ImageUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.code.kaptcha.Constants;
 
 import org.springframework.web.multipart.MultipartResolver;
 
@@ -115,13 +101,18 @@ public class ShopManageController {
 		Map<String ,Object> modelMap = new HashMap<>(); 
 		//1、从session中获取user
 		
-		//为了测试，在session硬编码创建一个用户
-		PersonInfo user = new PersonInfo();
-		user.setUserId(1L);
-		user.setName("boboooo");
-		request.getSession().setAttribute("user", user);
+//		//为了测试，在session硬编码创建一个用户
+//		PersonInfo user = new PersonInfo();
+//		user.setUserId(1L);
+//		user.setName("boboooo");
+//		request.getSession().setAttribute("user", user);
 		
-		user = (PersonInfo) request.getSession().getAttribute("user");
+		PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
+		if(user ==null) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "获取信息失败");
+			return modelMap;
+		}
 		//2、 查询并返回数据
 		try {
 				Shop shopCondition = new Shop();

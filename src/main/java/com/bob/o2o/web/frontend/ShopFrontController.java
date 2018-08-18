@@ -67,4 +67,14 @@ public class ShopFrontController {
 	public String productDetail() {
 		return "view/productdetail";
 	}
+	//登陆页面
+	@GetMapping("/login")
+	public String login() {
+		return "local/login";
+	}
+	//注册页面
+	@GetMapping("/register")
+	public String register() {
+		return "local/register";
+	}
 }

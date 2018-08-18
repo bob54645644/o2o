@@ -15,7 +15,7 @@ import com.bob.o2o.dto.ProductExecution;
 import com.bob.o2o.entity.Product;
 import com.bob.o2o.entity.ProductImg;
 import com.bob.o2o.enums.ProductStateEnum;
-import com.bob.o2o.execeptions.ProductOperationException;
+import com.bob.o2o.exceptions.ProductOperationException;
 import com.bob.o2o.service.ProductService;
 import com.bob.o2o.utils.ImageUtil;
 import com.bob.o2o.utils.PageCalculator;

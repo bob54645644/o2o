@@ -11,7 +11,7 @@ import com.bob.o2o.dao.ProductMapper;
 import com.bob.o2o.dto.ProductCategoryExecution;
 import com.bob.o2o.entity.ProductCategory;
 import com.bob.o2o.enums.ProductCategoryStateEnum;
-import com.bob.o2o.execeptions.ProductOperationException;
+import com.bob.o2o.exceptions.ProductOperationException;
 import com.bob.o2o.service.ProductCategoryService;
 
 /** 

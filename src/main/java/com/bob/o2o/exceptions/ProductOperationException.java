@@ -1,4 +1,4 @@
-package com.bob.o2o.execeptions;
+package com.bob.o2o.exceptions;
 /** 
 * @author bob 
 * @version 创建时间：2018年8月8日 下午2:07:14 

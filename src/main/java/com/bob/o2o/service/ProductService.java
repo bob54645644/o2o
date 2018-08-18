@@ -5,7 +5,7 @@ import java.util.List;
 import com.bob.o2o.dto.ImageHolder;
 import com.bob.o2o.dto.ProductExecution;
 import com.bob.o2o.entity.Product;
-import com.bob.o2o.execeptions.ProductOperationException;
+import com.bob.o2o.exceptions.ProductOperationException;
 
 /** 
 * @author bob 

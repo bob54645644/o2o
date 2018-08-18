@@ -11,7 +11,7 @@ import com.bob.o2o.dao.AreaMapper;
 import com.bob.o2o.dto.AreaExecution;
 import com.bob.o2o.entity.Area;
 import com.bob.o2o.enums.AreaStateEnum;
-import com.bob.o2o.execeptions.AreaOperationException;
+import com.bob.o2o.exceptions.AreaOperationException;
 import com.bob.o2o.service.AreaService;
 
 /** 
